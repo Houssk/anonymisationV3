@@ -65,7 +65,7 @@ namespace AnoDCM
          }
 
            //-------------------------------------------------------------------------------------------------------
-
+           int compteurWrite = 0;
          public void Anonymize(string chemin, string nom,int debut, int fin, string [] filename)
          {
              
@@ -80,13 +80,10 @@ namespace AnoDCM
              Tag pattag = new Tag(0x0010, 0x0010);
              bool ret = true;
              bool val = false;
-          /*   int comptReadFileT = 0;
-             int comptReadFileF = 0;
-             int comptReadAnoT = 0;
-              int comptReadAnoF = 0;*/
+      
             
              
-             Console.WriteLine(filename.Length);
+             Console.WriteLine(filename.Length+" debut boucle");
   
              for (int i = debut; i < fin; i++)
              {
@@ -107,14 +104,6 @@ namespace AnoDCM
 
                  ano.SetFile(reader.GetFile());
                  ano.Replace(pattag, patname);
-               /*  if (!ano.Replace(pattag, patname))
-                 {
-                     comptReadAnoT++;
-                 }
-                 else
-                 {
-                     comptReadAnoF++;
-                 }*/
                  ano.RemovePrivateTags();
 
 
@@ -123,9 +112,11 @@ namespace AnoDCM
                  writer.SetFile(ano.GetFile());
 
                  ret = writer.Write();
-                 if (!ret)
+                 while (!ret)
                  {
-                     ret = false;
+                    // compteurWrite++;
+                     ret = writer.Write();
+                     //ret = false;
                                
                  }
                 // return ret;
@@ -227,7 +218,7 @@ namespace AnoDCM
                     }
                 }
             }
-
+            Console.WriteLine(compteurWrite);
             return val;
          }
 
