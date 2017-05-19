@@ -65,7 +65,7 @@ namespace AnoDCM
          }
 
            //-------------------------------------------------------------------------------------------------------
-           int compteurWrite = 0;
+           
          public void Anonymize(string chemin, string nom,int debut, int fin, string [] filename)
          {
              
@@ -87,6 +87,7 @@ namespace AnoDCM
   
              for (int i = debut; i < fin; i++)
              {
+                 int compteurWrite = 0;
                  Anonymizer ano = new Anonymizer();
                  Reader reader = new Reader();
                
@@ -116,11 +117,16 @@ namespace AnoDCM
                  {
                     // compteurWrite++;
                      ret = writer.Write();
+                     compteurWrite++;
+                     if (compteurWrite >1000)
+                     {
+                         ret = true;
+                     }
                      //ret = false;
                                
                  }
                 // return ret;
-                 
+                 Console.WriteLine(compteurWrite);
              }
             
              val = ret;
@@ -218,7 +224,7 @@ namespace AnoDCM
                     }
                 }
             }
-            Console.WriteLine(compteurWrite);
+           
             return val;
          }
 

@@ -84,9 +84,8 @@ C:\Users\Utilisateur\Pictures\anonymisationV2\bin\Debug\AnoDCM.exe
 C:\Users\Utilisateur\Pictures\anonymisationV2\bin\Debug\AnoDCM.pdb
 C:\Users\Utilisateur\Pictures\anonymisationV2\bin\Debug\MySql.Data.dll
 C:\Users\Utilisateur\Desktop\anonymisationV2\bin\Debug\AnoDCM.exe.config
-C:\Users\Utilisateur\Desktop\anonymisationV2\obj\Debug\AnoDCM.exe
-C:\Users\Utilisateur\Desktop\anonymisationV2\obj\Debug\AnoDCM.pdb
 C:\Users\Utilisateur\Desktop\anonymisationV2\bin\Debug\AnoDCM.exe
 C:\Users\Utilisateur\Desktop\anonymisationV2\bin\Debug\AnoDCM.pdb
 C:\Users\Utilisateur\Desktop\anonymisationV2\bin\Debug\MySql.Data.dll
-C:\Users\Utilisateur\Desktop\anonymisationV2\obj\Debug\AnoDCM.csprojResolveAssemblyReference.cache
+C:\Users\Utilisateur\Desktop\anonymisationV2\obj\Debug\AnoDCM.exe
+C:\Users\Utilisateur\Desktop\anonymisationV2\obj\Debug\AnoDCM.pdb
