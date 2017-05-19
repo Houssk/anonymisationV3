@@ -65,7 +65,7 @@ namespace AnoDCM
          }
 
            //-------------------------------------------------------------------------------------------------------
-           
+           bool verification1 = false;
          public void Anonymize(string chemin, string nom,int debut, int fin, string [] filename)
          {
              
@@ -124,7 +124,8 @@ namespace AnoDCM
                      if (compteurWrite >100000)
                         {
                          ret = true;
-                      }
+                         verification1 = true;
+                        }
                      //ret = false;
                                
                  }
@@ -160,6 +161,20 @@ namespace AnoDCM
              reader = maCommande.ExecuteReader();
 
          }
+         public void verification(string nomZip)
+         {    
+             if (verification1 == true)
+             {
+                 if (nomZip == "mandibule")
+                 { 
+
+                 }
+                 else if (nomZip == "angioscanner")
+                 {
+
+                 }
+             }
+         }
          public void ValidationAnonM(int PPN, MySqlConnection conn, bool valid)
          {
              bool ok = valid;
@@ -182,6 +197,8 @@ namespace AnoDCM
              reader = maCommande.ExecuteReader();
 
          }
+
+
 
         // Nouvelle fonction pour la gestion du nombre de fichiers contenus dans un dossier
         public bool GestionNbFichier(string chemin, string nom)

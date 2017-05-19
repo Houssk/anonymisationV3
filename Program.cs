@@ -80,7 +80,7 @@ namespace AnoDCM
             {
                 Anonymisation.ValidationAnonA(PPN, connect, validation);
             }
-   
+            //Anonymisation.verification(zip);
             // Méthode qui permet de créer un dossier compressé des images DICOM anonymisées
              //ZipFile.CreateFromDirectory(@"\anonymisation", zip+".zip");
            // string ano = extractPath + @"\anonymisation";
