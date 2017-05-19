@@ -83,7 +83,7 @@ namespace AnoDCM
       
             
              
-             Console.WriteLine(filename.Length+" debut boucle");
+             Console.WriteLine(filename.Length+" debut boucle v5");
   
              for (int i = debut; i < fin; i++)
              {
@@ -116,12 +116,15 @@ namespace AnoDCM
                  while (!ret)
                  {
                     // compteurWrite++;
+                     writer = new Writer();
+                     writer.SetFileName(filename[i]);
+                     writer.SetFile(ano.GetFile());
                      ret = writer.Write();
                      compteurWrite++;
-                     if (compteurWrite >1000)
-                     {
+                     if (compteurWrite >100000)
+                        {
                          ret = true;
-                     }
+                      }
                      //ret = false;
                                
                  }
